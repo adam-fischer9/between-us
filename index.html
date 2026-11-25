@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BetweenUs — Couples Conversation Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="lang-en">
+  <div class="app-container">
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="brand">
+        <h1 id="app-title">BetweenUs</h1>
+        <p id="app-subtitle" class="subtitle"></p>
+      </div>
+      <button id="lang-toggle" class="lang-btn" type="button" aria-label="Switch Language">
+        EN | မြန်မာ
+      </button>
+    </header>
+
+    <!-- View 1: Topic Grid (Home Screen) -->
+    <main id="topics-view">
+      <div id="topics-grid" class="topics-grid"></div>
+    </main>
+
+    <!-- View 2: Question Deck -->
+    <main id="deck-view" class="hidden">
+      <div class="deck-nav">
+        <button id="back-btn" class="text-btn" type="button"></button>
+        <span id="deck-progress" class="progress-badge"></span>
+      </div>
+
+      <article id="question-card" class="question-card">
+        <div class="card-header">
+          <span id="card-topic-tag" class="topic-tag"></span>
+          <button id="clean-view-btn" class="icon-btn" type="button"></button>
+        </div>
+
+        <p id="question-text" class="question-text"></p>
+
+        <div id="card-actions" class="card-actions">
+          <button id="copy-btn" class="secondary-btn" type="button"></button>
+          <button id="next-btn" class="primary-btn" type="button"></button>
+          <button id="explore-topics-btn" class="primary-btn hidden" type="button"></button>
+        </div>
+      </article>
+
+      <div class="deck-footer">
+        <button id="reset-topic-btn" class="text-btn danger-text" type="button"></button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- Scripts loaded in order -->
+  <script src="data/ui.js"></script>
+  <script src="data/questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
